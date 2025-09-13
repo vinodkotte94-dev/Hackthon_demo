@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smart Agri Advisor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+<h1>🌱 Smart Agri Advisor</h1>
+<p>Soil, Crop, Weather & Market Advisory</p>
+</header>
+
+<div class="container">
+<label>Select Location</label>
+<select id="location">
+<option value="telangana">Telangana</option>
+<option value="punjab">Punjab</option>
+<option value="bihar">Bihar</option>
+<option value="delhi">Delhi</option>
+</select>
+<button onclick="voiceInput('location')">🎤 Speak Location</button>
+
+<label>Soil Type</label>
+<select id="soilType">
+<option value="loam">Loam</option>
+<option value="clay">Clay</option>
+<option value="sandy">Sandy</option>
+</select>
+<button onclick="voiceInput('soilType')">🎤 Speak Soil Type</button>
+
+<label>Language</label>
+<select id="language">
+<option value="en">English</option>
+<option value="hi">Hindi</option>
+<option value="te">Telugu</option>
+</select>
+
+<label>Upload/Capture Crop Image</label>
+<input type="file" id="cropImage" accept="image/*" capture="environment">
+
+<button onclick="getAdvice()">Get Recommendation</button>
+<button onclick="speakAdvice()">🔊 Hear Advice</button>
+
+<div class="result" id="adviceBox">No advice yet</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
